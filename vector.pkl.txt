@@ -1,0 +1,13 @@
+import pickle
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+# Example text data
+text_data = ["sample text", "another sample text"]
+
+# Fit the vectorizer
+vectorizer = TfidfVectorizer()
+vectorizer.fit(text_data)
+
+# Save the vectorizer
+with open('vector.pkl', 'wb') as vector_file:
+    pickle.dump(vectorizer, vector_file)
